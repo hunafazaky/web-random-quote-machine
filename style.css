@@ -1,0 +1,9 @@
+main {
+  display: flex;
+}
+#quote-box {
+  width: 300px;
+  background-color: darkgray;
+  margin: auto;
+  padding: 1em;
+}
