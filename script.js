@@ -34,7 +34,7 @@ const quoteList = [
 const quoteGenerator = () => {
   const random = Math.floor(Math.random() * quoteList.length);
   text.textContent = `“${quoteList[random]["text"]}”`;
-  author.textContent = `“${quoteList[random]["author"]}”`;
+  author.textContent = `- ${quoteList[random]["author"]}`;
   tweetQuote.href = `https://twitter.com/intent/tweet?hashtags=quotes&related=hunafazaky&text=${encodeURIComponent(
     `"${quoteList[random]["text"]}" - ${quoteList[random]["author"]}`
   )}`;
