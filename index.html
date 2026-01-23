@@ -4,17 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>HZ | Random Quote Machine</title>
   </head>
   <body>
     <main class="flex justify-center pt-10">
-      <article class="w-3/5 bg-gray-300 p-5 rounded-xl border border-gray-500 shadow-xs shadow-gray-500" id="quote-box">
+      <article
+        class="w-3/5 bg-gray-300 p-5 rounded-xl border border-gray-500 shadow-xs shadow-gray-500"
+        id="quote-box"
+      >
         <p class="text-lg font-bold italic text-center" id="text">"Kutipan"</p>
-        <p class="text-lg font-bold italic text-red-900 text-end" id="author">- Author</p>
+        <p class="text-lg font-bold italic text-red-900 text-end" id="author">
+          - Author
+        </p>
         <div class="mt-5">
-          <button class="bg-blue-500 hover:bg-gray-300 border-2 border-transparent hover:border-blue-500 text-sm font-medium px-2 py-1 rounded" id="new-quote">Kutipan Baru</button>
-          <a class="bg-green-500 hover:bg-gray-300 border-2 border-transparent hover:border-green-500 text-sm font-medium px-2 py-1 rounded" href="#" target="_blank" id="tweet-quote">Tweet Kutipan Ini</a>
+          <button
+            class="bg-green-500 hover:bg-gray-300 border-2 border-transparent hover:border-green-500 transition text-sm font-medium px-2 py-1 rounded cursor-pointer"
+            id="new-quote"
+          >
+            Kutipan Baru
+          </button>
+          <p class="font-bold text-xs">Bagikan:</p>
+          <a href="#" target="_blank" id="tweet-quote">
+            <svg
+              class="hover:bg-gray-100 rounded transition"
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+            >
+              <path
+                d="M 6 4 C 4.895 4 4 4.895 4 6 L 4 24 C 4 25.105 4.895 26 6 26 L 24 26 C 25.105 26 26 25.105 26 24 L 26 6 C 26 4.895 25.105 4 24 4 L 6 4 z M 8.6484375 9 L 13.259766 9 L 15.951172 12.847656 L 19.28125 9 L 20.732422 9 L 16.603516 13.78125 L 21.654297 21 L 17.042969 21 L 14.056641 16.730469 L 10.369141 21 L 8.8945312 21 L 13.400391 15.794922 L 8.6484375 9 z M 10.878906 10.183594 L 17.632812 19.810547 L 19.421875 19.810547 L 12.666016 10.183594 L 10.878906 10.183594 z"
+              ></path>
+            </svg>
+          </a>
         </div>
       </article>
       <script src="script.js"></script>
