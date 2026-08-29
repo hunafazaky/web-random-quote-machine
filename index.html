@@ -1,41 +1,39 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="style.css" />
-    <title>HZ | Random Quote Machine</title>
+    <title>Random Quote Machine</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/tokens.css" />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
-    <main class="flex flex-col justify-center items-center pt-10">
-      <h1 class="text-slate-900 font-bold text-xl p-2">Random Quote Machine</h1>
-      <article
-        class="w-3/5 bg-slate-300 p-5 rounded-lg border border-slate-500 shadow-xs shadow-slate-500"
-        id="quote-box"
-      >
-        <p class="text-lg font-bold italic text-center" id="text">"Kutipan"</p>
-        <p class="text-lg font-bold italic text-violet-900 text-end" id="author">
-          - Author
-        </p>
-        <div class="mt-5">
-          <button
-            class="bg-lime-500 hover:bg-slate-300 border-2 border-transparent hover:border-lime-500 transition text-sm font-medium px-2 py-1 rounded cursor-pointer"
-            id="new-quote"
+    <main>
+      <h1 id="main-title">Random Quote Machine</h1>
+
+      <article id="quote-box">
+        <p id="text">"Quote"</p>
+        <p id="author">- Author</p>
+
+        <div class="actions">
+          <button id="new-quote">New Quote</button>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            id="tweet-quote"
+            aria-label="Share this quote on X"
           >
-            New Quote
-          </button>
-          <p class="font-bold text-xs">Share:</p>
-          <a href="#" target="_blank" id="tweet-quote">
-            <svg
-              class="hover:bg-slate-100 rounded transition"
-              xmlns="http://www.w3.org/2000/svg"
-              x="0px"
-              y="0px"
-              width="30"
-              height="30"
-              viewBox="0 0 30 30"
-            >
+            <svg viewBox="0 0 30 30" class="tweet-icon" aria-hidden="true">
               <path
                 d="M 6 4 C 4.895 4 4 4.895 4 6 L 4 24 C 4 25.105 4.895 26 6 26 L 24 26 C 25.105 26 26 25.105 26 24 L 26 6 C 26 4.895 25.105 4 24 4 L 6 4 z M 8.6484375 9 L 13.259766 9 L 15.951172 12.847656 L 19.28125 9 L 20.732422 9 L 16.603516 13.78125 L 21.654297 21 L 17.042969 21 L 14.056641 16.730469 L 10.369141 21 L 8.8945312 21 L 13.400391 15.794922 L 8.6484375 9 z M 10.878906 10.183594 L 17.632812 19.810547 L 19.421875 19.810547 L 12.666016 10.183594 L 10.878906 10.183594 z"
               ></path>
@@ -43,7 +41,8 @@
           </a>
         </div>
       </article>
-      <script src="script.js"></script>
     </main>
+
+    <script type="module" src="./scripts/main.js"></script>
   </body>
 </html>

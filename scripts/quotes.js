@@ -1,11 +1,9 @@
-// Get Elements
-const quoteBox = document.getElementById("quote-box");
-const text = document.getElementById("text");
-const author = document.getElementById("author");
-const newQuote = document.getElementById("new-quote");
-const tweetQuote = document.getElementById("tweet-quote");
-// Variable and Function
-const quoteList = [
+/**
+ * Quote data, kept separate from the app logic so it's easy to edit or
+ * swap out without touching anything else.
+ * @type {{ text: string, author: string }[]}
+ */
+export const quotes = [
   {
     text: "Janganlah engkau menjelaskan tentang dirimu kepada siapapun, karena yang menyukaimu tidak butuh itu, dan yang membencimu tidak percaya itu.",
     author: "Ali bin Abi Thalib",
@@ -63,14 +61,3 @@ const quoteList = [
     author: "Ali bin Abi Thalib",
   },
 ];
-const quoteGenerator = () => {
-  const random = Math.floor(Math.random() * quoteList.length);
-  text.textContent = `“${quoteList[random]["text"]}”`;
-  author.textContent = `- ${quoteList[random]["author"]}`;
-  tweetQuote.href = `https://twitter.com/intent/tweet?hashtags=quotes&text=${encodeURIComponent(
-    `"${quoteList[random]["text"]}" - ${quoteList[random]["author"]}`,
-  )}`;
-};
-// Events
-document.addEventListener("DOMContentLoaded", quoteGenerator);
-newQuote.addEventListener("click", quoteGenerator);

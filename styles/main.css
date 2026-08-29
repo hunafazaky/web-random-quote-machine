@@ -1,0 +1,103 @@
+body {
+  background-image:
+    linear-gradient(var(--color-grid-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid-soft) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+}
+
+#main-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+}
+
+#quote-box {
+  background-color: var(--color-panel);
+  border: var(--border);
+  border-radius: var(--radius);
+  width: clamp(300px, 90vw, 560px);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+#text {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--color-ink);
+  text-align: center;
+}
+
+#author {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--color-accent);
+  text-align: right;
+}
+
+.actions {
+  margin-top: var(--space-3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+#new-quote {
+  padding: var(--space-2) var(--space-4);
+  border: var(--border);
+  border-radius: var(--radius);
+  background-color: var(--color-accent);
+  color: var(--color-panel);
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  transition: transform 0.15s ease;
+}
+
+#new-quote:hover {
+  transform: scale(0.98);
+}
+
+#tweet-quote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  border: var(--border);
+  color: var(--color-muted);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#tweet-quote:hover {
+  background-color: var(--color-accent-bg);
+  color: var(--color-accent);
+}
+
+.tweet-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: currentColor;
+}
